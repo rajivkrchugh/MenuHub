@@ -1,0 +1,61 @@
+/* ═══════════════════════════════════════════════════════
+   ChatPage layout
+   ═══════════════════════════════════════════════════════ */
+
+.chatpage {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.chatpage__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+.chatpage__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px 24px;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.chatpage__chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ── Sidebar overlay (mobile) ─────────────────────── */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+  backdrop-filter: blur(4px);
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .chatpage__body {
+    padding: 0 12px 12px;
+    gap: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .chatpage__body {
+    padding: 0 48px 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
