@@ -1,0 +1,107 @@
+2026-04-10 10:39:52 [ERROR]: OpenAI API error:
+2026-04-10 10:39:52 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-10 10:40:06 [ERROR]: OpenAI API error:
+2026-04-10 10:40:06 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-10 17:38:14 [ERROR]: OpenAI API error:
+2026-04-10 17:38:14 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-10 17:45:30 [ERROR]: OpenAI API error:
+2026-04-10 17:45:30 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-10 17:50:08 [ERROR]: OpenAI API error:
+2026-04-10 17:50:08 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-10 17:50:17 [ERROR]: OpenAI API error:
+2026-04-10 17:50:17 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:16:57 [ERROR]: Gemini API error:
+2026-04-11 11:16:57 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:77:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:19:13 [ERROR]: Gemini API error:
+2026-04-11 11:19:13 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:69:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:20:44 [ERROR]: Gemini API error:
+2026-04-11 11:20:44 [ERROR]: Error: [404 Not Found] models/gemini-pro is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at makeRequest (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\menuchat\backend\services\openai.service.js:60:20)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:20:44 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:71:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:22:22 [ERROR]: Gemini API error:
+2026-04-11 11:22:22 [ERROR]: Full error:
+2026-04-11 11:22:22 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:92:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:23:56 [ERROR]: Gemini API error:
+2026-04-11 11:23:56 [ERROR]: Error: [404 Not Found] models/gemini-pro is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at makeRequest (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\menuchat\backend\services\openai.service.js:88:20)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:23:56 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:112:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:25:42 [ERROR]: Gemini API error:
+2026-04-11 11:25:42 [ERROR]: Error: [404 Not Found] models/gemini-pro is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at makeRequest (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\menuchat\backend\services\openai.service.js:88:20)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:25:42 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:112:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:28:36 [ERROR]: Gemini API error:
+2026-04-11 11:28:36 [ERROR]: Error: [404 Not Found] models/gemini-pro is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at makeRequest (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\menuchat\backend\services\openai.service.js:88:20)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:28:36 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:112:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:30:42 [ERROR]: Gemini API error:
+2026-04-11 11:30:42 [ERROR]: Error: [404 Not Found] models/gemini-3-flash-preview is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at makeRequest (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\menuchat\backend\services\openai.service.js:95:20)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:30:42 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:119:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 14:37:25 [ERROR]: MongoDB connection error:

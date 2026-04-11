@@ -1,0 +1,197 @@
+2026-04-10 10:38:01 [INFO]: MongoDB connected successfully
+2026-04-10 10:38:01 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-10 10:39:52 [ERROR]: OpenAI API error:
+2026-04-10 10:39:52 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-10 10:40:06 [ERROR]: OpenAI API error:
+2026-04-10 10:40:06 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-10 17:35:57 [INFO]: MongoDB connected successfully
+2026-04-10 17:35:57 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-10 17:38:14 [ERROR]: OpenAI API error:
+2026-04-10 17:38:14 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-10 17:45:30 [ERROR]: OpenAI API error:
+2026-04-10 17:45:30 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-10 17:50:08 [ERROR]: OpenAI API error:
+2026-04-10 17:50:08 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-10 17:50:17 [ERROR]: OpenAI API error:
+2026-04-10 17:50:17 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\services\openai.service.js:70:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (C:\Users\INCYBER MEDIA\Downloads\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 10:58:26 [INFO]: MongoDB connected successfully
+2026-04-11 10:58:26 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:05:43 [WARN]: MongoDB disconnected
+2026-04-11 11:16:15 [INFO]: MongoDB connected successfully
+2026-04-11 11:16:15 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:16:57 [ERROR]: Gemini API error:
+2026-04-11 11:16:57 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:77:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:18:05 [INFO]: MongoDB connected successfully
+2026-04-11 11:18:05 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:18:39 [INFO]: MongoDB connected successfully
+2026-04-11 11:18:39 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:19:13 [ERROR]: Gemini API error:
+2026-04-11 11:19:13 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:69:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:20:11 [INFO]: MongoDB connected successfully
+2026-04-11 11:20:11 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:20:44 [ERROR]: Gemini API error:
+2026-04-11 11:20:44 [ERROR]: Error: [404 Not Found] models/gemini-pro is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at makeRequest (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\menuchat\backend\services\openai.service.js:60:20)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:20:44 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:71:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:22:13 [INFO]: MongoDB connected successfully
+2026-04-11 11:22:13 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:22:22 [ERROR]: Gemini API error:
+2026-04-11 11:22:22 [ERROR]: Full error:
+2026-04-11 11:22:22 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:92:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:23:11 [INFO]: MongoDB connected successfully
+2026-04-11 11:23:11 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:23:29 [INFO]: MongoDB connected successfully
+2026-04-11 11:23:29 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:23:37 [INFO]: MongoDB connected successfully
+2026-04-11 11:23:37 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:23:40 [INFO]: MongoDB connected successfully
+2026-04-11 11:23:40 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:23:56 [ERROR]: Gemini API error:
+2026-04-11 11:23:56 [ERROR]: Error: [404 Not Found] models/gemini-pro is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at makeRequest (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\menuchat\backend\services\openai.service.js:88:20)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:23:56 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:112:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:24:28 [INFO]: MongoDB connected successfully
+2026-04-11 11:24:28 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:25:21 [INFO]: MongoDB connected successfully
+2026-04-11 11:25:21 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:25:23 [INFO]: MongoDB connected successfully
+2026-04-11 11:25:23 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:25:42 [ERROR]: Gemini API error:
+2026-04-11 11:25:42 [ERROR]: Error: [404 Not Found] models/gemini-pro is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at makeRequest (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\menuchat\backend\services\openai.service.js:88:20)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:25:42 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:112:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:28:36 [ERROR]: Gemini API error:
+2026-04-11 11:28:36 [ERROR]: Error: [404 Not Found] models/gemini-pro is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at makeRequest (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\menuchat\backend\services\openai.service.js:88:20)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:28:36 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:112:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:30:06 [INFO]: MongoDB connected successfully
+2026-04-11 11:30:06 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:30:10 [INFO]: MongoDB connected successfully
+2026-04-11 11:30:10 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:30:22 [INFO]: MongoDB connected successfully
+2026-04-11 11:30:22 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:30:42 [ERROR]: Gemini API error:
+2026-04-11 11:30:42 [ERROR]: Error: [404 Not Found] models/gemini-3-flash-preview is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at makeRequest (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\menuchat\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\menuchat\backend\services\openai.service.js:95:20)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:30:42 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\menuchat\backend\services\openai.service.js:119:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\menuchat\backend\controllers\chat.controller.js:29:51)
+2026-04-11 11:31:56 [INFO]: MongoDB connected successfully
+2026-04-11 11:31:56 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:31:59 [INFO]: MongoDB connected successfully
+2026-04-11 11:31:59 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:32:14 [INFO]: MongoDB connected successfully
+2026-04-11 11:32:14 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:32:24 [INFO]: MongoDB connected successfully
+2026-04-11 11:32:24 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:32:35 [INFO]: MongoDB connected successfully
+2026-04-11 11:32:35 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:32:58 [INFO]: MongoDB connected successfully
+2026-04-11 11:32:58 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:33:04 [INFO]: MongoDB connected successfully
+2026-04-11 11:33:04 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:33:19 [INFO]: MongoDB connected successfully
+2026-04-11 11:33:19 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 11:44:00 [WARN]: MongoDB disconnected
+2026-04-11 11:51:46 [INFO]: MongoDB connected successfully
+2026-04-11 11:51:46 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 12:16:58 [WARN]: MongoDB disconnected
+2026-04-11 13:03:00 [WARN]: MongoDB disconnected
+2026-04-11 13:05:50 [INFO]: MongoDB connected successfully
+2026-04-11 13:05:50 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 13:06:00 [INFO]: MongoDB connected successfully
+2026-04-11 13:06:00 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 13:06:05 [INFO]: MongoDB connected successfully
+2026-04-11 13:06:05 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 13:06:17 [INFO]: MongoDB connected successfully
+2026-04-11 13:06:17 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 13:06:43 [INFO]: MongoDB connected successfully
+2026-04-11 13:06:43 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 13:20:32 [INFO]: MongoDB connected successfully
+2026-04-11 13:20:32 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 13:20:41 [INFO]: MongoDB connected successfully
+2026-04-11 13:20:41 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 13:21:56 [INFO]: MongoDB connected successfully
+2026-04-11 13:21:56 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 13:22:02 [INFO]: MongoDB connected successfully
+2026-04-11 13:22:02 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 13:22:05 [INFO]: MongoDB connected successfully
+2026-04-11 13:22:05 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 13:22:09 [INFO]: MongoDB connected successfully
+2026-04-11 13:22:09 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 13:22:14 [INFO]: MongoDB connected successfully
+2026-04-11 13:22:14 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 14:06:25 [WARN]: MongoDB disconnected
+2026-04-11 14:32:56 [INFO]: MongoDB connected successfully
+2026-04-11 14:33:26 [INFO]: MongoDB connected successfully
+2026-04-11 14:34:51 [INFO]: MongoDB connected successfully
+2026-04-11 14:37:25 [ERROR]: MongoDB connection error:
+2026-04-11 14:37:58 [INFO]: MongoDB connected successfully
+2026-04-11 14:37:58 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 14:38:49 [INFO]: MongoDB connected successfully
+2026-04-11 14:38:49 [INFO]: MenuChat API running on port 5000 [production]
