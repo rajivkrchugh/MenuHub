@@ -17,7 +17,7 @@ app.use(helmet());
 
 // ─── CORS ────────────────────────────────────────────
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://menu-hub-ashen.vercel.app',
+  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'x-user-id'],
   credentials: true,
