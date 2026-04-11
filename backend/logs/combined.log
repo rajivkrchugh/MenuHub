@@ -205,3 +205,5 @@
 2026-04-11 18:04:51 [INFO]: MenuChat API running on port 5000 [production]
 2026-04-11 18:08:06 [INFO]: MongoDB connected successfully
 2026-04-11 18:08:06 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 18:12:59 [INFO]: MongoDB connected successfully
+2026-04-11 18:12:59 [INFO]: MenuChat API running on port 5000 [development]
