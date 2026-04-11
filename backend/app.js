@@ -17,10 +17,10 @@ app.use(helmet());
 
 // ─── CORS ────────────────────────────────────────────
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'x-user-id'],
-  credentials: true,
+  origin: '*',                  // allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: '*',          // allow all headers
+  credentials: false,           // must be false when origin is '*'
   optionsSuccessStatus: 200,
 }));
 
