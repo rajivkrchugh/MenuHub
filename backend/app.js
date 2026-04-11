@@ -17,10 +17,10 @@ app.use(helmet());
 
 // ─── CORS ────────────────────────────────────────────
 app.use(cors({
-  origin: '*',                  // allow all origins
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: '*',          // allow all headers
-  credentials: false,           // must be false when origin is '*'
+  origin: ['http://localhost:3000', 'https://menu-4z71m7e1t-rajivkrchughs-projects.vercel.app'],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: '*',
+  credentials: true,
   optionsSuccessStatus: 200,
 }));
 
