@@ -18,9 +18,10 @@ app.use(helmet());
 // ─── CORS ────────────────────────────────────────────
 app.use(cors({
   origin: process.env.FRONTEND_URL || 'https://menu-hub-ashen.vercel.app',
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'x-user-id'],
   credentials: true,
+  optionsSuccessStatus: 200,
 }));
 
 // ─── Body parsing ────────────────────────────────────
