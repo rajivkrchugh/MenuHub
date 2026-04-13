@@ -20,7 +20,6 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'https://menu-hub-ashen.vercel.app',
-    'https://menu-hub-*.vercel.app',
     'https://menu-hub-63j4-7w93x80kx-rajivkrchughs-projects.vercel.app'
   ],
   methods: ['GET', 'POST', 'OPTIONS'],
