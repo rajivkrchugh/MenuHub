@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getUserId } from '../utils/userId';
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || '/api',
+  baseURL: process.env.REACT_APP_API_URL || 'https://menu-hub-63j4-7w93x80kx-rajivkrchughs-projects.vercel.app/api',
   timeout: 30000,
 });
 
