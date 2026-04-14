@@ -98,13 +98,14 @@ async function getMenuResponse(userMessage, history = []) {
     console.log('Total messages:', messages.length);
     console.log('Getting model instance...');
     
-    const model = genAI.getGenerativeModel({ 
-      model: process.env.GEMINI_MODEL || 'gemini-1.5-flash-latest',
-      generationConfig: {
-        temperature: 0.3,
-      },
-      systemInstruction: SYSTEM_PROMPT // Use system instruction directly
-    });
+const model = genAI.getGenerativeModel({ 
+  model: process.env.GEMINI_MODEL || 'gemini-1.5-flash',
+  generationConfig: {
+    temperature: 0.3,
+    maxOutputTokens: 2048,
+  },
+  systemInstruction: SYSTEM_PROMPT
+});
     
     console.log('Model retrieved. Sending message with retry...');
     
@@ -114,7 +115,11 @@ async function getMenuResponse(userMessage, history = []) {
     const generateFn = async () => {
       const result = await model.generateContent(fullPrompt);
       const response = await result.response;
-      return response.text();
+      const text = response.text();
+      if (!text || text.trim().length === 0) {
+        throw new Error('Empty response from AI service');
+      }
+      return text;
     };
     
     const content = await retryWithBackoff(generateFn);
@@ -125,31 +130,33 @@ async function getMenuResponse(userMessage, history = []) {
     const { restaurantName, location } = extractRestaurantInfo(userMessage);
 
     return { content, restaurantName, location };
-  } catch (err) {
-    console.error('=== GEMINI API ERROR (Final) ===');
-    console.error('Error Type:', err.constructor.name);
-    console.error('Error Message:', err.message);
-    console.error('Error Code:', err.code);
-    console.error('Error Status:', err.status);
-    console.error('Full Error Object:', err);
-    console.error('========================');
-    
-    logger.error('Gemini API error:', {
-      message: err.message,
-      status: err.status,
-      code: err.code,
-      stack: err.stack
-    });
-    
-    // Provide user-friendly message for common errors
-    if (err.status === 503 || err.message.includes('503')) {
-      throw new Error('AI service temporarily overloaded. Please try again in a moment.');
-    } else if (err.status === 429 || err.message.includes('429')) {
-      throw new Error('Rate limit reached. Please wait before sending more requests.');
+    } catch (err) {
+      console.error('=== GEMINI API ERROR (Final) ===');
+      console.error('Error Type:', err.constructor.name);
+      console.error('Error Message:', err.message);
+      console.error('Error Status:', err.status || 'N/A');
+      console.error('========================');
+      
+      logger.error('Gemini API error:', {
+        message: err.message,
+        status: err.status,
+        code: err.code,
+        stack: err.stack
+      });
+      
+      // User-friendly errors
+      if (err.status === 429 || err.message.includes('quota') || err.message.includes('rate limit')) {
+        throw new Error('AI service quota exceeded. Please try again later or contact support.');
+      } else if (err.status === 503 || err.message.includes('503') || err.message.includes('high demand')) {
+        throw new Error('AI service temporarily unavailable. Please try again in a moment.');
+      } else if (err.status === 400 || err.message.includes('400') || err.message.includes('Invalid JSON')) {
+        throw new Error('Configuration error. Please contact support.');
+      } else if (err.message.includes('model') && err.message.includes('not found')) {
+        throw new Error('AI model unavailable. Please contact support.');
+      }
+      
+      throw new Error('Failed to get AI response. Please try again.');
     }
-    
-    throw new Error('Failed to get response from AI service. Please try again.');
-  }
 }
 
 /**
