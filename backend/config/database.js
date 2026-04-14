@@ -15,7 +15,6 @@ async function connectDB() {
     await mongoose.connect(uri, {
       serverSelectionTimeoutMS: 5000,
       socketTimeoutMS: 45000,
-      bufferMaxEntries: 0,
     });
     logger.info('MongoDB connected successfully');
   } catch (err) {

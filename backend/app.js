@@ -16,8 +16,23 @@ const app = express();
 app.use(helmet());
 
 // ─── CORS ────────────────────────────────────────────
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://menu-hub-63j4.vercel.app',
+  'https://menu-hub-ashen.vercel.app'
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://menu-hub-ashen.vercel.app',
+  origin: (origin, callback) => {
+    // Allow requests with no origin (mobile apps, etc.)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'x-user-id'],
   credentials: true,
