@@ -37,6 +37,31 @@ STRICT RULES:
  * @param {Array}  history     - Previous messages in [{role, content}] format (max last 6)
  * @returns {{ content: string, restaurantName: string|null, location: string|null }}
  */
+/**
+ * Retry function with exponential backoff for transient API errors (503, 429).
+ */
+async function retryWithBackoff(fn, maxRetries = 3, baseDelay = 1000) {
+  let lastError;
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      lastError = error;
+      const isRetryable = error.status === 503 || error.status === 429 || 
+                         error.message?.includes('503') || error.message?.includes('429');
+      
+      if (!isRetryable || attempt === maxRetries) {
+        throw error;
+      }
+      
+      const delay = baseDelay * Math.pow(2, attempt);
+      console.log(`Retry ${attempt + 1}/${maxRetries} after ${delay}ms:`, error.message);
+      await new Promise(resolve => setTimeout(resolve, delay));
+    }
+  }
+  throw lastError;
+}
+
 async function getMenuResponse(userMessage, history = []) {
   /*
    * ── Data-retrieval hook (future) ──────────────────────
@@ -74,41 +99,56 @@ async function getMenuResponse(userMessage, history = []) {
     console.log('Getting model instance...');
     
     const model = genAI.getGenerativeModel({ 
-      model: process.env.GEMINI_MODEL || 'gemini-1.5-flash-latest'
+      model: process.env.GEMINI_MODEL || 'gemini-1.5-flash-latest',
+      generationConfig: {
+        temperature: 0.3,
+      },
+      systemInstruction: SYSTEM_PROMPT // Use system instruction directly
     });
     
-    console.log('Model retrieved. Sending message...');
+    console.log('Model retrieved. Sending message with retry...');
     
-    // Use startChat for conversation history support
-    const chatHistory = messages.slice(0, -1);
-    const lastMessage = messages[messages.length - 1]?.parts[0]?.text || userMessageWithSystem;
+    // Use generateContent for efficiency (supports history via safety settings)
+    const fullPrompt = messages.map(m => m.parts[0].text).join('\n');
     
-    const chat = model.startChat({ history: chatHistory });
-    const result = await chat.sendMessage(lastMessage);
+    const generateFn = async () => {
+      const result = await model.generateContent(fullPrompt);
+      const response = await result.response;
+      return response.text();
+    };
     
-    console.log('Response received from Gemini');
-    const response = await result.response;
-    const content = response.text();
+    const content = await retryWithBackoff(generateFn);
     
     console.log('Content extracted, length:', content.length);
-
+    
     // Attempt to extract restaurant name & location from the user query
     const { restaurantName, location } = extractRestaurantInfo(userMessage);
 
     return { content, restaurantName, location };
   } catch (err) {
-    console.error('=== GEMINI API ERROR ===');
+    console.error('=== GEMINI API ERROR (Final) ===');
     console.error('Error Type:', err.constructor.name);
     console.error('Error Message:', err.message);
     console.error('Error Code:', err.code);
     console.error('Error Status:', err.status);
     console.error('Full Error Object:', err);
-    console.error('Stack Trace:', err.stack);
     console.error('========================');
     
-    logger.error('Gemini API error:', err.message);
-    logger.error('Error details:', err);
-    throw new Error('Failed to get response from AI service.');
+    logger.error('Gemini API error:', {
+      message: err.message,
+      status: err.status,
+      code: err.code,
+      stack: err.stack
+    });
+    
+    // Provide user-friendly message for common errors
+    if (err.status === 503 || err.message.includes('503')) {
+      throw new Error('AI service temporarily overloaded. Please try again in a moment.');
+    } else if (err.status === 429 || err.message.includes('429')) {
+      throw new Error('Rate limit reached. Please wait before sending more requests.');
+    }
+    
+    throw new Error('Failed to get response from AI service. Please try again.');
   }
 }
 

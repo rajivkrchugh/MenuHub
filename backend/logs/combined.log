@@ -209,15 +209,73 @@
 2026-04-11 18:12:59 [INFO]: MenuChat API running on port 5000 [development]
 2026-04-11 18:24:50 [WARN]: MongoDB disconnected
 2026-04-11 18:58:32 [WARN]: MongoDB disconnected
-2026-04-11 20:18:44 [INFO]: MongoDB connected successfully
-2026-04-11 20:18:44 [INFO]: MenuChat API running on port 5000 [development]
-2026-04-11 20:26:36 [INFO]: MongoDB connected successfully
-2026-04-11 20:26:36 [INFO]: MenuChat API running on port 5000 [development]
-2026-04-11 20:32:05 [INFO]: MongoDB connected successfully
-2026-04-11 20:32:05 [INFO]: MenuChat API running on port 5000 [development]
-2026-04-11 20:42:17 [INFO]: MongoDB connected successfully
-2026-04-11 20:42:17 [INFO]: MenuChat API running on port 5000 [development]
-2026-04-11 20:46:45 [INFO]: MongoDB connected successfully
-2026-04-11 20:46:45 [INFO]: MenuChat API running on port 5000 [development]
-2026-04-11 20:53:41 [INFO]: MongoDB connected successfully
-2026-04-11 20:53:41 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 19:03:08 [WARN]: MongoDB disconnected
+2026-04-11 21:20:01 [INFO]: MongoDB connected successfully
+2026-04-11 21:20:01 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-11 21:22:31 [ERROR]: Gemini API error:
+2026-04-11 21:22:31 [ERROR]: Error: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 29.416898989s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-flash"},"quotaValue":"20"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"29s"}]
+    at makeRequest (D:\MenuHub\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\MenuHub\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\MenuHub\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\MenuHub\backend\services\openai.service.js:87:20)
+    at async sendMessage (D:\MenuHub\backend\controllers\chat.controller.js:29:51)
+2026-04-11 21:22:31 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\MenuHub\backend\services\openai.service.js:111:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\MenuHub\backend\controllers\chat.controller.js:29:51)
+2026-04-11 21:25:32 [WARN]: MongoDB disconnected
+2026-04-13 10:08:09 [ERROR]: MongoDB connection error:
+2026-04-13 10:08:45 [INFO]: MongoDB connected successfully
+2026-04-13 10:08:45 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-14 13:41:11 [INFO]: MongoDB connected successfully
+2026-04-14 13:41:11 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-14 13:43:20 [ERROR]: Gemini API error:
+2026-04-14 13:43:20 [ERROR]: Error: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+    at makeRequest (D:\MenuHub-Locally\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\MenuHub-Locally\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async ChatSession.sendMessage (D:\MenuHub-Locally\backend\node_modules\@google\generative-ai\dist\index.js:904:9)
+    at async getMenuResponse (D:\MenuHub-Locally\backend\services\openai.service.js:87:20)
+    at async sendMessage (D:\MenuHub-Locally\backend\controllers\chat.controller.js:29:51)
+2026-04-14 13:43:20 [ERROR]: Error: Failed to get response from AI service.
+    at getMenuResponse (D:\MenuHub-Locally\backend\services\openai.service.js:111:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\MenuHub-Locally\backend\controllers\chat.controller.js:29:51)
+2026-04-14 13:52:15 [INFO]: MongoDB connected successfully
+2026-04-14 13:52:15 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-14 13:52:31 [ERROR]: Error: [400 Bad Request] Invalid JSON payload received. Unknown name "responseMimeType" at 'generation_config': Cannot find field. [{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"generation_config","description":"Invalid JSON payload received. Unknown name \"responseMimeType\" at 'generation_config': Cannot find field."}]}]
+    at makeRequest (D:\MenuHub-Locally\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\MenuHub-Locally\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async generateFn (D:\MenuHub-Locally\backend\services\openai.service.js:116:22)
+    at async retryWithBackoff (D:\MenuHub-Locally\backend\services\openai.service.js:47:14)
+    at async getMenuResponse (D:\MenuHub-Locally\backend\services\openai.service.js:121:21)
+    at async sendMessage (D:\MenuHub-Locally\backend\controllers\chat.controller.js:29:51)
+2026-04-14 13:52:31 [ERROR]: Error: Failed to get response from AI service. Please try again.
+    at getMenuResponse (D:\MenuHub-Locally\backend\services\openai.service.js:152:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\MenuHub-Locally\backend\controllers\chat.controller.js:29:51)
+2026-04-14 13:53:00 [ERROR]: Error: [400 Bad Request] Invalid JSON payload received. Unknown name "responseMimeType" at 'generation_config': Cannot find field. [{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"generation_config","description":"Invalid JSON payload received. Unknown name \"responseMimeType\" at 'generation_config': Cannot find field."}]}]
+    at makeRequest (D:\MenuHub-Locally\backend\node_modules\@google\generative-ai\dist\index.js:258:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContent (D:\MenuHub-Locally\backend\node_modules\@google\generative-ai\dist\index.js:650:22)
+    at async generateFn (D:\MenuHub-Locally\backend\services\openai.service.js:116:22)
+    at async retryWithBackoff (D:\MenuHub-Locally\backend\services\openai.service.js:47:14)
+    at async getMenuResponse (D:\MenuHub-Locally\backend\services\openai.service.js:121:21)
+    at async sendMessage (D:\MenuHub-Locally\backend\controllers\chat.controller.js:29:51)
+2026-04-14 13:53:00 [ERROR]: Error: Failed to get response from AI service. Please try again.
+    at getMenuResponse (D:\MenuHub-Locally\backend\services\openai.service.js:152:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendMessage (D:\MenuHub-Locally\backend\controllers\chat.controller.js:29:51)
+2026-04-14 13:53:30 [INFO]: MongoDB connected successfully
+2026-04-14 14:18:37 [WARN]: MongoDB disconnected
+2026-04-14 14:47:10 [WARN]: MongoDB disconnected
+2026-04-14 14:47:13 [INFO]: MongoDB connected successfully
+2026-04-14 14:47:37 [INFO]: MongoDB connected successfully
+2026-04-14 14:47:37 [INFO]: MenuChat API running on port 5000 [development]
+2026-04-14 16:48:36 [ERROR]: MongoDB connection error:
+2026-04-14 16:48:50 [INFO]: MongoDB connected successfully
+2026-04-14 16:48:50 [INFO]: MenuChat API running on port 5000 [development]

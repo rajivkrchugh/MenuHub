@@ -15,13 +15,9 @@ const app = express();
 // ─── Security headers ────────────────────────────────
 app.use(helmet());
 
-// ─── CORS (LOCAL + PROD) ─────────────────────────────
+// ─── CORS ────────────────────────────────────────────
 app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'https://menu-hub-ashen.vercel.app',
-    'https://menu-hub-63j4-7w93x80kx-rajivkrchughs-projects.vercel.app'
-  ],
+  origin: process.env.FRONTEND_URL || 'https://menu-hub-ashen.vercel.app',
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'x-user-id'],
   credentials: true,
